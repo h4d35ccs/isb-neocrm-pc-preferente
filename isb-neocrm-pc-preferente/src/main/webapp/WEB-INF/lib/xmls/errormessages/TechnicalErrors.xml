@@ -1,0 +1,54 @@
+<TechnicalErrors>
+	<Error>
+		<Code>CloseLDAPCon</Code>
+		<Description>Error cerrando conexi�n con LDAP.</Description>
+	</Error>
+	<Error>
+		<Code>GetLDAPAttrs</Code>
+		<Description>Error Obteniendo atributos de LDAP del usuario.</Description>
+	</Error>
+	<Error>
+		<Code>LoginConvertData</Code>
+		<Description>Error cargando datos obtenidos de LDAP en Bean_User.</Description>
+	</Error>
+	<Error>
+		<Code>DBdisConnect</Code>
+		<Description>Error desconectando de la base de datos.</Description>
+	</Error>
+	<Error>
+		<Code>DBconnect</Code>
+		<Description>Error conectando de la base de datos.</Description>
+	</Error>
+	<Error>
+		<Code>DBexecuteQuery</Code>
+		<Description>Error ejecutando sentencia contra base de datos.</Description>
+	</Error>
+	<Error>
+		<Code>DBcomposeQuery</Code>
+		<Description>Error en la construcci�n de la sentencia SQL.</Description>
+	</Error>
+	<Error>
+		<Code>DBgetColumns</Code>
+		<Description>Error en la obtenci�n de informaci�n de columnas de la tabla.</Description>
+	</Error>
+	<Error>
+		<Code>DBgetData</Code>
+		<Description>Error en la obtenci�n de datos de la tabla.</Description>
+	</Error>
+	<Error>
+		<Code>BLloadDataBeanRS</Code>
+		<Description>Error volcando datos del Resultset al Bean.</Description>
+	</Error>
+	<Error>
+		<Code>BLloadDataBeanREQ</Code>
+		<Description>Error volcando datos de la Request al Bean.</Description>
+	</Error>
+	<Error>
+		<Code>HOSTExecuteTRX</Code>
+		<Description>Error al ejecutar TRX.</Description>
+	</Error>
+	<Error>
+		<Code>SOCKETreadSocket</Code>
+		<Description>Error al leer del Socket.</Description>
+	</Error>
+</TechnicalErrors>

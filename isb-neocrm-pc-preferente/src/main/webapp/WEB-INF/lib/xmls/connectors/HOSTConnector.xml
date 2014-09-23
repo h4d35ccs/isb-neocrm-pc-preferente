@@ -1,0 +1,97 @@
+<HOSTConnector>
+	<HOSTServers>
+		<HOSTServer>
+			<HOSTServerId>DEV1</HOSTServerId>
+			<HOSTHost>dbd1.isban.dev.corp</HOSTHost>
+			<HOSTPort>5100</HOSTPort>
+		</HOSTServer>
+	</HOSTServers>
+	<HOSTProtocols>
+		<HOSTProtocol>
+			<HOSTProtocolId>TRX1</HOSTProtocolId>
+			<Version>08</Version>
+			<CanalLogico>0015</CanalLogico>
+			<CanalFisico>0015</CanalFisico>
+			<TerminalId></TerminalId>
+			<TerminalType>J</TerminalType>
+			<ScrollBegin>0001</ScrollBegin>
+			<ScrollIndex>0001</ScrollIndex>
+			<MarketingChannel></MarketingChannel>
+			<OperataionChannel></OperataionChannel>
+			<InternetUser></InternetUser>
+			<IndicadorTrush></IndicadorTrush>
+			<Languaje>E</Languaje>
+			<LogLevel></LogLevel>
+			<DeactivateBusinessLogicIndicator>N</DeactivateBusinessLogicIndicator>
+			<SeparadorOcur>�</SeparadorOcur>
+			<Separador>�</Separador>
+			<Encoding>ISO-8859-1</Encoding>
+			
+			
+			<CodeMessageId>EZY</CodeMessageId>
+			
+			<CabeceraMensaje>{transaccion[4][ ][R]}{operacion[1][ ][R]}{version[2][ ][R]}{empresa[4][ ][R]}{centro[4][ ][R]}{terminalId[5][ ][R]}{terminalType[1][ ][R]}{msgVersion[5][ ][R]}{scrollBegin[4][0][L]}{scrollIndex[4][0][L]}{canalLogico[4][0][L]}{markeginChannel[3][ ][R]}{operationChannel[3][ ][R]}{internetUser[13][ ][R]}{indicadorTrush[1][ ][R]}{userAdress[15][ ][R]}{languaje[1][ ][R]}{logLevel[1][ ][R]}{logToken1[24][ ][R]}{logToken2[24][ ][R]}{deactivateBusinessLogicIndicator[1][ ][R]}{separadorOcur[1][ ][R]}{separador[1][ ][R]}</CabeceraMensaje>
+			<CabeceraRespuesta>{result[1]}{nextTrxOp[5]}{scrollEndIndicator[1]}{alternativeDevices[1]}{scrollBegin[4]}{scrollIndex[4]}{resolutionTextCode[6]}{nextRequest[3]}{mesaggeType[1]}{resolutionText[80]}{resolutionCode[3]}{ocurrencesSeparator[1]}{separator[1]}</CabeceraRespuesta>
+			<TamanoCabeceraRespuesta>111</TamanoCabeceraRespuesta>
+			
+			<!-- Falta lo siguiente: -->
+			<!-- 		
+				String empresa = GenericUtils.padded("", 4, ' ');
+				String centro = GenericUtils.padded("", 4, ' ');
+				
+		        //InetAddress address = InetAddress.getLocalHost();
+		        //String ip = address.getHostAddress();
+				String userAddress = GenericUtils.getFormatedUserAddress("");//ip);
+		
+				String logToken1 = GenericUtils.padded("", 24, ' ');
+				String logToken2 = GenericUtils.padded("", 24, ' ');
+		 	-->
+			
+			
+		</HOSTProtocol>
+
+		<HOSTProtocol>
+			<HOSTProtocolId>TRX2</HOSTProtocolId>
+			<Version>06</Version>
+			<CanalLogico>0015</CanalLogico>
+			<CanalFisico>0015</CanalFisico>
+			<TerminalId></TerminalId>
+			<TerminalType> </TerminalType>
+			<ScrollBegin>0001</ScrollBegin>
+			<ScrollIndex>0001</ScrollIndex>
+			<MarketingChannel></MarketingChannel>
+			<OperataionChannel></OperataionChannel>
+			<InternetUser></InternetUser>
+			<IndicadorTrush></IndicadorTrush>
+			<Languaje>E</Languaje>
+			<LogLevel></LogLevel>
+			<DeactivateBusinessLogicIndicator>S</DeactivateBusinessLogicIndicator>
+			<SeparadorOcur>�</SeparadorOcur>
+			<Separador>�</Separador>
+			<Encoding>ISO-8859-1</Encoding>
+			
+			<CodeMessageId>EZY</CodeMessageId>
+			
+			<CabeceraMensaje>{transaccion[4][ ][R]}{operacion[1][ ][R]}{version[2][ ][R]}{empresa[4][ ][R]}{centro[4][ ][R]}{terminalId[5][ ][R]}{terminalType[1][ ][R]}{msgVersion[5][ ][R]}{scrollBegin[4][0][L]}{scrollIndex[4][0][L]}{canalLogico[4][0][L]}{markeginChannel[3][ ][R]}{operationChannel[3][ ][R]}{internetUser[13][ ][R]}{indicadorTrush[1][ ][R]}{userAdress[15][ ][R]}{languaje[1][ ][R]}{logLevel[1][ ][R]}{separadorOcur[1][ ][R]}{separador[1][ ][R]}</CabeceraMensaje>
+			<CabeceraRespuesta>{result[1]}{nextTrxOp[5]}{scrollEndIndicator[1]}{alternativeDevices[1]}{scrollBegin[4]}{scrollIndex[4]}{resolutionTextCode[6]}{nextRequest[3]}{mesaggeType[1]}{resolutionText[80]}{resolutionCode[3]}{ocurrencesSeparator[1]}{separator[1]}</CabeceraRespuesta>
+			<TamanoCabeceraRespuesta>111</TamanoCabeceraRespuesta>
+			
+			<!-- Falta lo siguiente: -->
+			<!-- 		
+				String empresa = GenericUtils.padded("", 4, ' ');
+				String centro = GenericUtils.padded("", 4, ' ');
+				
+		        //InetAddress address = InetAddress.getLocalHost();
+		        //String ip = address.getHostAddress();
+				String userAddress = GenericUtils.getFormatedUserAddress("");//ip);
+		
+				String logToken1 = GenericUtils.padded("", 24, ' ');
+				String logToken2 = GenericUtils.padded("", 24, ' ');
+		 	-->
+			
+			
+		</HOSTProtocol>
+
+	</HOSTProtocols>
+	
+</HOSTConnector>

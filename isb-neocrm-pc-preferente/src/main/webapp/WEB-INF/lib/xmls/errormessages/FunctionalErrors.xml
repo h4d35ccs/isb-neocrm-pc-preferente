@@ -1,0 +1,6 @@
+<FunctionalErrors>
+	<Error>
+		<Code>Login</Code>
+		<Description>Usuario o contrase�a incorrectos.</Description>
+	</Error>
+</FunctionalErrors>
