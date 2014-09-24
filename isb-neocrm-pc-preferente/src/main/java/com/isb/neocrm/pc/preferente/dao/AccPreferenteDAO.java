@@ -11,6 +11,6 @@ import com.isb.neocrm.pc.preferente.dao.jpa.entity.AccReactivaEntity;
  * Date: 16/09/14.
  */
 public interface AccPreferenteDAO {
-    public AccPreferenteEntity getAccionPreferente(String id);
-    public AccReactivaEntity getAccionReactiva(String id);
+    public AccPreferenteEntity getAccionPreferente(String personType, int personCode);
+    public AccReactivaEntity getAccionReactiva(String personType, int personCode);
 }

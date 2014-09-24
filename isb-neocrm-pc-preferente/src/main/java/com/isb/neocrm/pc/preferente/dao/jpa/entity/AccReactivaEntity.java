@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -16,9 +18,44 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "PC_ACC_REACT", schema="DESNEOC")
+@Table(name = "PC_ACC_REACT")
+@NamedQueries({ @NamedQuery(name = "findAccionReactiva", query = "SELECT E FROM AccReactivaEntity E WHERE E.idempr = :IDEMPR AND E.tipopers = :TIPOPERS AND E.codpers = :CODPERS") })
 public class AccReactivaEntity implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	//IDEMPR---CHAR(4 BYTE)
+	@Column(name="IDEMPR")
+	private String idempr;
+		
+	//TIPOPERS---CHAR(1 BYTE)
+	@Id
+	@Column(name="TIPOPERS")
+	private String tipopers;
+	
+	//CODPERS---INT
+	@Id
+	@Column(name="CODPERS")
+	private int codpers;
+	
+	//CODOFERTA---CHAR(15 BYTE)
+	@Column(name="CODOFERTA")
+	private String codoferta;
+		
+	//DESC_CORTA---CHAR(50 BYTE)
+	@Column(name="DESC_CORTA")
+	private String desc_corta;
+		
+	//DESC_LARGA---VARCHAR2(1000 BYTE)
+	@Column(name="DESC_LARGA")
+	private String desc_larga;
+	
+	//IMAGEN---VARCHAR2(1500 BYTE)
+	@Column(name="IMAGEN")
+	private String imagen;
 	
 	//IDEMPR---CHAR(4 BYTE)
 	public String getIDEMPR() {
@@ -81,48 +118,6 @@ public class AccReactivaEntity implements Serializable {
 	public void setIMAGEN(String imagen) {
 		this.imagen = imagen;
 	}
-	
-	
-	
-	
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	//IDEMPR---CHAR(4 BYTE)
-	@Column(name="IDEMPR")
-	private String idempr;
-		
-	//TIPOPERS---CHAR(1 BYTE)
-	@Id
-	@Column(name="TIPOPERS")
-	private String tipopers;
-	
-	//CODPERS---INT
-	@Id
-	@Column(name="CODPERS")
-	private int codpers;
-	
-	//CODOFERTA---CHAR(15 BYTE)
-	@Column(name="CODOFERTA")
-	private String codoferta;
-		
-	//DESC_CORTA---CHAR(50 BYTE)
-	@Column(name="DESC_CORTA")
-	private String desc_corta;
-		
-	//DESC_LARGA---VARCHAR2(1000 BYTE)
-	@Column(name="DESC_LARGA")
-	private String desc_larga;
-	
-	//IMAGEN---VARCHAR2(1500 BYTE)
-	@Column(name="IMAGEN")
-	private String imagen;
-	
-	
-	
 	
 	
 	@Override

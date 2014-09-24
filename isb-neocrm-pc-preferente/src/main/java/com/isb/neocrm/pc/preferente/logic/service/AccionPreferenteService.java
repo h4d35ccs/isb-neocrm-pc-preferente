@@ -8,6 +8,6 @@ import com.isb.neocrm.pc.preferente.logic.domain.Accion;
  * Date: 02/09/14.
  */
 public interface AccionPreferenteService {
-	public Accion getAccPrefById(String id);
-    public Accion getAccReactById(String id);
+	public Accion getAccPrefById(String personType,String personCode);
+  
 }

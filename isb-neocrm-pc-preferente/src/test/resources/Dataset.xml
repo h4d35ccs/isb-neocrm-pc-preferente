@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<PC_ACC_PREF TIPOPERS="e" CODPERS="1111" CAMPAGNA="campagna"
+		CODCLASE="codclase" IDEMPR="idempr" IDSUBEVE="subeventos" IDTIPEVE="tipoevento"
+		IMAGEN="/var/imagen.jpg" />
+	<PC_ACC_PREF TIPOPERS="e" CODPERS="1112" CAMPAGNA="campagna"
+		CODCLASE="codclase" IDEMPR="idempr" IDSUBEVE="subeventos" IDTIPEVE="tipoevento"
+		IMAGEN="/var/imagen1.jpg" />
+	<PC_ACC_PREF TIPOPERS="e" CODPERS="1113" CAMPAGNA="campagna"
+		CODCLASE="codclase" IDEMPR="idempr" IDSUBEVE="subeventos" IDTIPEVE="tipoevento"
+		IMAGEN="/var/imagen2.jpg" />
+	<PC_ACC_PREF TIPOPERS="e" CODPERS="1114" CAMPAGNA="campagna"
+		CODCLASE="codclase" IDEMPR="idempr" IDSUBEVE="subeventos" IDTIPEVE="tipoevento"
+		IMAGEN="/var/imagen3.jpg" />
+	<PC_ACC_PREF TIPOPERS="f" CODPERS="1111" CAMPAGNA="campagna"
+		CODCLASE="codclase" IDEMPR="idempr" IDSUBEVE="subeventos" IDTIPEVE="tipoevento"
+		IMAGEN="/var/imagen4.jpg" />
+	<PC_ACC_REACT TIPOPERS="g" CODPERS="1111" CODOFERTA="codoferta"
+		DESC_CORTA="Lorem ipsum"
+		DESC_LARGA="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, "
+		IDEMPR="0049" IMAGEN="/var/imagen5.jpg" />
+	<PC_ACC_REACT TIPOPERS="g" CODPERS="1112" CODOFERTA="codoferta"
+		DESC_CORTA="Lorem ipsum"
+		DESC_LARGA="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, "
+		IDEMPR="0049" IMAGEN="/var/imagen6.jpg" />
+	<PC_ACC_REACT TIPOPERS="g" CODPERS="1113" CODOFERTA="codoferta"
+		DESC_CORTA="Lorem ipsum"
+		DESC_LARGA="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, "
+		IDEMPR="0049" IMAGEN="/var/imagen7.jpg" />
+	<PC_ACC_REACT TIPOPERS="p" CODPERS="1114" CODOFERTA="codoferta"
+		DESC_CORTA="Lorem ipsum"
+		DESC_LARGA="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aeneancommodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, "
+		IDEMPR="0049" IMAGEN="/var/imagen8.jpg" />
+</dataset>

@@ -1,47 +1,70 @@
 package com.isb.neocrm.pc.preferente.pres.rs.impl;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.isb.neocrm.pc.preferente.logic.domain.Accion;
-import com.isb.neocrm.pc.preferente.logic.service.AccionPreferenteService;
-import com.isb.neocrm.pc.preferente.pres.rs.CommonResource;
+import com.isb.neocrm.pc.preferente.pres.rs.AccionPreferenteResource;
+import com.isb.neocrm.pc.preferente.pres.rs.api.Response;
+import com.isb.neocrm.pc.preferente.pres.rs.api.ResponseFactory;
 
 /**
  * Implementación del servicio REST
- * Author: schamorro
- * Date: 16/09/14.
+ * Author: Otto Abreu
+ * Date: 23/09/14.
  */
-@RestController
-@RequestMapping("/acc_pref")
-public class AccPreferenteResourceRESTimpl extends CommonResource {
+
+public class AccPreferenteResourceRESTimpl {
 
 	private static final Logger log = LoggerFactory.getLogger(AccPreferenteResourceRESTimpl.class);
 	
 	
 	@Autowired
-	private AccionPreferenteService acc_prefservice;
+	private AccionPreferenteResource accionPreferente;
 	
+	@Autowired
+	private ResponseFactory responseFactory;
 	
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "APPLICATION/JSON")
-	public Accion getAccPrefById(@PathVariable("id") String id) {
+	@GET
+	@Path("/acc_pref/{personType}/{personCode}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getAccPrefById(@PathParam("personType") String personType,@PathParam("personCode") String personCode) {
 		
-		log.info("ServicioRest");
-		Accion acc_pref= acc_prefservice.getAccPrefById(id);
-		log.info("Fin ServicioRest");
-		return acc_pref;
-	};
+		log.info("Preferente Rest service Invoked");
+		Response response = this.getActionPrefResponse(personType,personCode);
+		log.info("Preferente Rest service Ends: "+response);
+		return response;
+	}
 	
-	public Accion getAccReactById(@PathVariable("id") String id) {
+	private Response getActionPrefResponse(String personType,String personCode){
+		Response response = null;
 		
-		log.info("ServicioRest");
-		Accion acc_react= acc_prefservice.getAccReactById(id);
-		log.info("Fin ServicioRest");
-		return acc_react;
-	};
+		try {
+			
+			Accion accpref= accionPreferente.getAccPrefById(personType,personCode);
+			response = this.generateResponseFromAction(accpref);
+		
+		} catch (Exception e) {
+			
+			response= this.handleError(e);
+		}
+		
+		return response;
+	}
+	
+	
+	private Response generateResponseFromAction(Accion action){
+		return this.responseFactory.instanciateAccionResponse(action);
+	}
+	
+	private Response handleError(Exception e){
+		return this.responseFactory.instanciateErrorResponse(e);
+	}
 }

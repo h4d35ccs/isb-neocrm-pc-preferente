@@ -4,16 +4,22 @@ package com.isb.neocrm.pc.preferente.pres.rs.api;
  * Author: schamorro
  * Date: 02/09/14.
  */
-public class ErrorResponse {
-    private String errorCode;
+public class ErrorResponse implements Response {
+    
+	
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+	private int errorCode;
     private String consumerMessage;
     private String applicationMessage;
 
-    public String getErrorCode() {
+    public int getErrorCode() {
         return errorCode;
     }
 
-    public void setErrorCode(String errorCode) {
+    public void setErrorCode(int errorCode) {
         this.errorCode = errorCode;
     }
 
@@ -32,4 +38,13 @@ public class ErrorResponse {
     public void setApplicationMessage(String applicationMessage) {
         this.applicationMessage = applicationMessage;
     }
+
+	@Override
+	public String toString() {
+		return "ErrorResponse [errorCode=" + errorCode + ", consumerMessage="
+				+ consumerMessage + ", applicationMessage="
+				+ applicationMessage + "]";
+	}
+    
+    
 }

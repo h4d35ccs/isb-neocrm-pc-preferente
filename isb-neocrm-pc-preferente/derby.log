@@ -1,0 +1,48 @@
+----------------------------------------------------------------
+Wed Sep 24 00:58:30 VET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0148-a621-dc56-0000040503b8 
+on database directory memory:/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente/1527:neo-crm with class loader sun.misc.Launcher$AppClassLoader@21044daf 
+Loaded from file:/Users/ottoabreu/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_45-b18
+user.dir=/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.9.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Sep 24 00:58:38 VET 2014:
+Shutting down instance a816c00e-0148-a621-dc56-0000040503b8 on database directory memory:/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente/1527:neo-crm with class loader sun.misc.Launcher$AppClassLoader@21044daf 
+----------------------------------------------------------------
+Wed Sep 24 00:58:39 VET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance 374fc0db-0148-a621-dc56-0000040503b8 
+on database directory memory:/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente/1527:neo-crm with class loader sun.misc.Launcher$AppClassLoader@21044daf 
+Loaded from file:/Users/ottoabreu/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_45-b18
+user.dir=/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.9.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Sep 24 00:58:42 VET 2014:
+Shutting down instance 374fc0db-0148-a621-dc56-0000040503b8 on database directory memory:/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente/1527:neo-crm with class loader sun.misc.Launcher$AppClassLoader@21044daf 
+----------------------------------------------------------------
+Wed Sep 24 00:58:43 VET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance f584c1a3-0148-a621-dc56-0000040503b8 
+on database directory memory:/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente/1527:neo-crm with class loader sun.misc.Launcher$AppClassLoader@21044daf 
+Loaded from file:/Users/ottoabreu/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_45-b18
+user.dir=/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.9.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Sep 24 00:58:45 VET 2014:
+Shutting down instance f584c1a3-0148-a621-dc56-0000040503b8 on database directory memory:/Users/ottoabreu/git/isb-neocrm-pc-preferente/isb-neocrm-pc-preferente/1527:neo-crm with class loader sun.misc.Launcher$AppClassLoader@21044daf 

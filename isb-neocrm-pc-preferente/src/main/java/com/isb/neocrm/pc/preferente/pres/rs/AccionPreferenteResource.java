@@ -1,7 +1,6 @@
 package com.isb.neocrm.pc.preferente.pres.rs;
 
-import com.isb.neocrm.pc.preferente.logic.domain.AccionPreferente;
-import com.isb.neocrm.pc.preferente.logic.domain.AccionReactiva;
+import com.isb.neocrm.pc.preferente.logic.domain.Accion;
 
 /**
  * Interface del servicio REST asociado al recurso: accion.
@@ -10,6 +9,7 @@ import com.isb.neocrm.pc.preferente.logic.domain.AccionReactiva;
  */
 
 public interface AccionPreferenteResource {
-    public AccionPreferente getAccPrefById(Long id);
-    public AccionReactiva getAccReactById(Long id);
+    
+	public Accion getAccPrefById(String personType,String personCode);
+   
 }
