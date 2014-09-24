@@ -47,7 +47,7 @@ public class ConstantsProvider {
 
 	public boolean isTestEnv() {
 		if (testenv == null || testenv.equals("")
-				|| testenv.equalsIgnoreCase("true")) {
+				|| !testenv.equalsIgnoreCase("true")) {
 			return false;
 		} else {
 			return true;
