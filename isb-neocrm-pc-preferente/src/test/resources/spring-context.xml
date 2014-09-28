@@ -14,8 +14,7 @@
                            http://cxf.apache.org/schemas/jaxrs.xsd">
     <context:component-scan base-package="com.isb.neocrm.pc.preferente" />
     <context:component-scan base-package="test.com.isb.neocrm.pc.preferente" />
-	<context:property-placeholder location="classpath:preferente.properties" order="1" ignore-unresolvable="true"/>
-	<context:property-placeholder location="jdbc.properties" order="2" ignore-unresolvable="true"/>
+	<context:property-placeholder location="classpath:preferente.properties"  ignore-unresolvable="true"/>
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<mvc:annotation-driven />
 	<jaxrs:server id="preferenteService" address="/">

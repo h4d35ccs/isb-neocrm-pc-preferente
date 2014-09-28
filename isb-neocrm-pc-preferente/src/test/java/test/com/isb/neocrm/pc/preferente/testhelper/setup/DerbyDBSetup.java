@@ -4,7 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.SQLNonTransientConnectionException;
 
 import org.apache.derby.tools.ij;
 import org.dbunit.DatabaseUnitException;
@@ -26,19 +25,17 @@ public final class DerbyDBSetup {
 
 	@Autowired
 	private ConnectionPropertiesHelper propertiesHelper;
-
-	private String dbserver;
-
-	private String port;
-
+	
 	private String username;
-
-	private String databaseName;
+	
+	private String pass;
+	
+	private String url;
 
 	public void setUpDerby() throws ClassNotFoundException, SQLException,
 			UnsupportedEncodingException, DatabaseUnitException {
-		String createUserParam = "create=true;password=1111";
 		this.setupConnectionParams();
+		String createUserParam = ";password="+this.pass+";user=" + this.username;
 
 		try (Connection conn = this.createConnection(createUserParam)) {
 
@@ -53,10 +50,10 @@ public final class DerbyDBSetup {
 	}
 
 	private void setupConnectionParams() {
-		this.dbserver = propertiesHelper.getDbserver();
+		this.url = propertiesHelper.getConnectionUrl();
+		this.pass = propertiesHelper.getPass();
 		this.username = propertiesHelper.getUsername();
-		this.databaseName = propertiesHelper.getDatabaseName();
-		this.port = propertiesHelper.getPort();
+		
 
 	}
 
@@ -64,10 +61,9 @@ public final class DerbyDBSetup {
 			ClassNotFoundException {
 
 		Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-		String serverPortDatabase = this.dbserver + ":" + this.port + "/"
-				+ this.databaseName;
-		return DriverManager.getConnection("jdbc:derby:" + serverPortDatabase
-				+ ";" + extraParam + ";user=" + this.username);
+		String completeUrl = this.url+extraParam;
+		logger.debug("creating connection:"+completeUrl);
+		return DriverManager.getConnection(completeUrl);
 	}
 
 	private void createTables(Connection connection)
@@ -90,11 +86,11 @@ public final class DerbyDBSetup {
 	}
 
 	public void dropDatabase() throws ClassNotFoundException, SQLException {
-		String dropParam = "drop=true";
+		String dropParam = ";drop=true";
 		this.setupConnectionParams();
 		try (Connection conn = this.createConnection(dropParam)) {
 			conn.close();
-		} catch (SQLNonTransientConnectionException e) {
+		} catch (Exception e) {
 			// after droping throws this exception, is not an error
 		}
 
